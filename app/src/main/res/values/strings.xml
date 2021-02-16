@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Leaf Classification</string>
+    <string name="selectSampleText">Select sample</string>
+    <string name="scoredLabelsText">Scored Labels</string>
+    <string name="scoredProbabilitiesText">Scored Probabilities</string>
+    <string name="predictButtonText">Predict</string>
+    <string name="empty">N/A</string>
 </resources>

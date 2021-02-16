@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -36,7 +35,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     List<TrainSample> trainSamples = new ArrayList<TrainSample>();
     TrainSample selectedSample;
     TextView scoredLabels;
-    TextView scoredProbabilities;
     TextView scoredProbabilitiesPercentage;
     TextView scoredTitle;
     Button btnPredict;
@@ -53,13 +51,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     private void setUpUI() {
-        this.scoredLabels = (TextView) findViewById(R.id.tvScoredLabels);
-        this.scoredProbabilities = (TextView) findViewById(R.id.tvScoredProbabilities);
-        this.scoredProbabilitiesPercentage = (TextView) findViewById(R.id.tvScoredProbabilitiesPercentage);
-        this.scoredTitle = (TextView) findViewById(R.id.tvTitle);
+        this.scoredLabels = (TextView) findViewById(R.id.tvScoredLabelsValue);
+        this.scoredProbabilitiesPercentage = (TextView) findViewById(R.id.tvScoredProbabilitiesValue);
+        this.scoredTitle = (TextView) findViewById(R.id.tvSampleName);
         this.btnPredict = (Button) findViewById(R.id.btnPredict);
-        this.sampleSpinner = (Spinner) findViewById(R.id.spinner);
-        this.selectedTestSample = (TextView) findViewById(R.id.selectedTestSample);
+        this.sampleSpinner = (Spinner) findViewById(R.id.sampleSpinner);
+        this.selectedTestSample = (TextView) findViewById(R.id.tvSampleView);
         this.predictProgress = (ProgressBar) findViewById(R.id.predictProgress);
 
         btnPredict.setOnClickListener(this);
